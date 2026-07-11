@@ -21,14 +21,23 @@ export default function Nav() {
   }, []);
 
   const openMenu = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
     setOpen(true);
+
+    requestAnimationFrame(() => {
+      root.style.scrollBehavior = previousScrollBehavior;
+    });
   };
 
   return (
     <header
       className={
-        "sticky top-0 z-50 w-full transition-colors duration-500 md:fixed " +
+        (open ? "relative " : "sticky top-0 ") +
+        "z-50 w-full transition-colors duration-500 md:fixed md:top-0 " +
         (scrolled || open ? "bg-bone/95 backdrop-blur-sm" : "bg-transparent")
       }
     >
