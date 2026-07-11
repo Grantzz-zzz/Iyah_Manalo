@@ -28,8 +28,8 @@ export default function Nav() {
   return (
     <header
       className={
-        "fixed top-0 z-50 w-full transition-colors duration-500 " +
-        (scrolled ? "bg-bone/90 backdrop-blur-sm" : "bg-transparent")
+        "sticky top-0 z-50 w-full transition-colors duration-500 md:fixed " +
+        (scrolled || open ? "bg-bone/95 backdrop-blur-sm" : "bg-transparent")
       }
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-[8vw]">
@@ -64,47 +64,45 @@ export default function Nav() {
         </nav>
 
         <button
-          onClick={openMenu}
+          onClick={open ? () => setOpen(false) : openMenu}
           className="label md:hidden"
-          aria-label="Open menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
-          Menu
+          {open ? "Close" : "Menu"}
         </button>
       </div>
 
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-8 bg-bone md:hidden"
+          <motion.nav
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden border-t border-sand bg-bone md:hidden"
           >
-            <button
-              onClick={() => setOpen(false)}
-              className="label absolute top-5 right-6"
-              aria-label="Close menu"
-            >
-              Close
-            </button>
+            <div className="grid grid-cols-2 gap-x-6 px-6 py-8">
             {links.map((l, i) => (
               <motion.div
                 key={l.to}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.08 * i }}
+                className="border-b border-sand py-4"
               >
                 <NavLink
                   to={l.to}
                   end={l.to === "/"}
                   onClick={() => setOpen(false)}
-                  className="font-display text-3xl italic"
+                  className="font-display text-2xl italic"
                 >
                   {l.label}
                 </NavLink>
               </motion.div>
             ))}
-          </motion.div>
+            </div>
+          </motion.nav>
         )}
       </AnimatePresence>
     </header>
