@@ -20,6 +20,11 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const openMenu = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    setOpen(true);
+  };
+
   return (
     <header
       className={
@@ -59,7 +64,7 @@ export default function Nav() {
         </nav>
 
         <button
-          onClick={() => setOpen(true)}
+          onClick={openMenu}
           className="label md:hidden"
           aria-label="Open menu"
         >
