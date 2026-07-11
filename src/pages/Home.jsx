@@ -25,18 +25,31 @@ export default function Home() {
             />
           </div>
           <div className="md:col-span-6 md:col-start-7">
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.7 }}
-              className="measure text-lg text-ink-70"
+              className="measure space-y-5 text-lg text-ink-70"
             >
-              Iyah Manalo is a Manila-based model and influencer working
-              across editorial, runway, and campaign. This portfolio is a
-              running record of the work — five reels, five moods, one
-              point of view.
-            </motion.p>
+              <p>
+                Hi, I’m Iyah Manalo, a beauty, fashion, and lifestyle content
+                creator based in the Philippines.
+              </p>
+              <p>
+                I create clean, elevated content that blends luxury aesthetics
+                with authentic storytelling. My passion lies in beauty,
+                skincare, fashion, wellness, and lifestyle, where I showcase
+                products through engaging GRWMs, product features, event
+                coverage, and everyday experiences.
+              </p>
+              <p>
+                I believe the most impactful content feels genuine while
+                remaining visually refined. My goal is to help brands connect
+                with their audience through high-quality, relatable content
+                that inspires trust and drives engagement.
+              </p>
+            </motion.div>
             <motion.a
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}

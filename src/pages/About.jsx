@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import ReelHero from "../components/ReelHero";
 import RevealText from "../components/RevealText";
-import FeaturedWorksPhone from "../components/FeaturedWorksPhone";
+import VideoTile from "../components/VideoTile";
+import AestheticClinicBrochure from "../components/AestheticClinicBrochure";
 
 const stats = [
   ["Based", "Manila, Philippines"],
@@ -22,13 +22,10 @@ export default function About() {
       </section>
 
       <section className="grid gap-0 md:grid-cols-2">
-        <div className="order-2 md:order-1">
-          <ReelHero
-            src="/media/reel-2.mp4"
-            poster="/media/posters/reel-2.jpg"
-            variant="split"
-            align="center"
-          />
+        <div className="order-2 flex min-h-[70svh] items-center justify-center bg-linen px-6 py-12 md:order-1 md:min-h-[100svh]">
+          <div className="w-full max-w-[min(100%,56.25svh)]">
+            <VideoTile src="/media/reel-2.mp4" poster="/media/posters/reel-2.jpg" />
+          </div>
         </div>
 
         <div className="order-1 flex flex-col justify-center px-6 py-16 md:order-2 md:px-[6vw] md:py-24">
@@ -74,8 +71,8 @@ export default function About() {
       </section>
 
       <section className="border-t border-sand px-6 py-20 md:px-[8vw] md:py-28">
-        <p className="label mb-10">Beauty</p>
-        <FeaturedWorksPhone />
+        <p className="label mb-10">Aesthetic Clinic</p>
+        <AestheticClinicBrochure />
         <div className="hidden">
           {["gallery-7.jpg", "gallery-8.jpg"].map((src, i) => (
             <motion.img

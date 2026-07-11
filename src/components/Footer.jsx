@@ -5,11 +5,11 @@ export default function Footer() {
         <p className="font-display italic text-lg">Iyah Manalo</p>
 
         <div className="flex gap-6">
-          <a href="https://instagram.com" className="label hover:text-espresso" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/iyahmnl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" className="label hover:text-espresso" target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href="https://tiktok.com" className="label hover:text-espresso" target="_blank" rel="noreferrer">
-            TikTok
+          <a href="https://www.facebook.com/iyah.manalo.10" className="label hover:text-espresso" target="_blank" rel="noreferrer">
+            Facebook
           </a>
           <a href="mailto:booking@iyahmanalo.com" className="label hover:text-espresso">
             Email
