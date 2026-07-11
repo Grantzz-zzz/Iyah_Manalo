@@ -25,11 +25,16 @@ export default function Nav() {
     const previousScrollBehavior = root.style.scrollBehavior;
 
     root.style.scrollBehavior = "auto";
-    window.scrollTo(0, 0);
     setOpen(true);
 
     requestAnimationFrame(() => {
-      root.style.scrollBehavior = previousScrollBehavior;
+      root.scrollTop = 0;
+      document.body.scrollTop = 0;
+      window.scrollTo(0, 0);
+
+      requestAnimationFrame(() => {
+        root.style.scrollBehavior = previousScrollBehavior;
+      });
     });
   };
 
