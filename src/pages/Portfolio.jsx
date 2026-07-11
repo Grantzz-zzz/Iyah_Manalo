@@ -4,16 +4,16 @@ import VideoTile from "../components/VideoTile";
 import RevealText from "../components/RevealText";
 
 const galleryImages = Array.from({ length: 8 }, (_, i) => ({
-  src: `/media/gallery-${i + 1}.jpg`,
+  src: `media/gallery-${i + 1}.jpg`,
   alt: `Iyah Manalo — editorial image ${i + 1}`,
 }));
 
 const featuredWorks = [
-  { src: "/media/Featured-Works-1.mp4", poster: "/media/posters/Featured-Works-1.jpg", label: "Campaign 01" },
-  { src: "/media/Featured-Works-2.mp4", poster: "/media/posters/Featured-Works-2.jpg", label: "Campaign 02" },
-  { src: "/media/Featured-Works-3.mp4", poster: "/media/posters/Featured-Works-3.jpg", label: "Campaign 03" },
-  { src: "/media/Featured-Works-4.mp4", poster: "/media/posters/Featured-Works-4.jpg", label: "Campaign 04" },
-  { src: "/media/Featured-Works-5.mp4", label: "Campaign 05" },
+  { src: "media/Featured-Works-1.mp4", poster: "media/posters/Featured-Works-1.jpg", label: "Campaign 01" },
+  { src: "media/Featured-Works-2.mp4", poster: "media/posters/Featured-Works-2.jpg", label: "Campaign 02" },
+  { src: "media/Featured-Works-3.mp4", poster: "media/posters/Featured-Works-3.jpg", label: "Campaign 03" },
+  { src: "media/Featured-Works-4.mp4", poster: "media/posters/Featured-Works-4.jpg", label: "Campaign 04" },
+  { src: "media/Featured-Works-5.mp4", label: "Campaign 05" },
 ];
 
 export default function Portfolio() {

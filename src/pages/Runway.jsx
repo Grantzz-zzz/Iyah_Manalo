@@ -4,11 +4,11 @@ import VideoTile from "../components/VideoTile";
 import RevealText from "../components/RevealText";
 
 const beautyReel = [
-  { src: "/media/beauty-1.mp4", poster: "/media/posters/beauty-1.jpg", label: "Beauty 01" },
-  { src: "/media/beauty-2.mp4", poster: "/media/posters/beauty-2.jpg", label: "Beauty 02" },
-  { src: "/media/beauty-3.mp4", poster: "/media/posters/beauty-3.jpg", label: "Beauty 03" },
-  { src: "/media/beauty-4.mp4", poster: "/media/posters/beauty-4.jpg", label: "Beauty 04" },
-  { src: "/media/beauty-5.mp4", poster: "/media/posters/beauty-5.jpg", label: "Beauty 05" },
+  { src: "media/beauty-1.mp4", poster: "media/posters/beauty-1.jpg", label: "Beauty 01" },
+  { src: "media/beauty-2.mp4", poster: "media/posters/beauty-2.jpg", label: "Beauty 02" },
+  { src: "media/beauty-3.mp4", poster: "media/posters/beauty-3.jpg", label: "Beauty 03" },
+  { src: "media/beauty-4.mp4", poster: "media/posters/beauty-4.jpg", label: "Beauty 04" },
+  { src: "media/beauty-5.mp4", poster: "media/posters/beauty-5.jpg", label: "Beauty 05" },
 ];
 
 export default function Runway() {
@@ -16,9 +16,9 @@ export default function Runway() {
     <div>
       <TripleReelHero
         reels={[
-          { src: "/media/beauty-4.mp4", poster: "/media/posters/beauty-4.jpg" },
-          { src: "/media/reel-4.mp4", poster: "/media/posters/reel-4.jpg" },
-          { src: "/media/beauty-5.mp4", poster: "/media/posters/beauty-5.jpg" },
+          { src: "media/beauty-4.mp4", poster: "media/posters/beauty-4.jpg" },
+          { src: "media/reel-4.mp4", poster: "media/posters/reel-4.jpg" },
+          { src: "media/beauty-5.mp4", poster: "media/posters/beauty-5.jpg" },
         ]}
         eyebrow="On the Runway"
         caption="Fashion Week — Backstage to Front Row"

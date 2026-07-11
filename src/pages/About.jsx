@@ -24,7 +24,7 @@ export default function About() {
       <section className="grid gap-0 md:grid-cols-2">
         <div className="order-2 flex min-h-[70svh] items-center justify-center bg-linen px-6 py-12 md:order-1 md:min-h-[100svh]">
           <div className="w-full max-w-[min(100%,56.25svh)]">
-            <VideoTile src="/media/reel-2.mp4" poster="/media/posters/reel-2.jpg" />
+            <VideoTile src="media/reel-2.mp4" poster="media/posters/reel-2.jpg" />
           </div>
         </div>
 
@@ -77,7 +77,7 @@ export default function About() {
           {["gallery-7.jpg", "gallery-8.jpg"].map((src, i) => (
             <motion.img
               key={src}
-              src={`/media/${src}`}
+              src={`media/${src}`}
               alt="Iyah Manalo — editorial still"
               loading="lazy"
               initial={{ opacity: 0, y: 20 }}

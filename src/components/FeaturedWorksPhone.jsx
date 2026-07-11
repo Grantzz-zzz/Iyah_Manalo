@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { useInViewVideo } from "../lib/useInViewVideo";
 
 const works = Array.from({ length: 5 }, (_, index) => ({
-  src: `/media/beauty-${index + 1}.mp4`,
-  poster: `/media/posters/beauty-${index + 1}.jpg`,
+  src: `media/beauty-${index + 1}.mp4`,
+  poster: `media/posters/beauty-${index + 1}.jpg`,
   label: `0${index + 1}`,
 }));
 

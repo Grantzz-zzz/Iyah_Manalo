@@ -39,9 +39,9 @@ export default function Contact() {
     <div>
       <TripleReelHero
         reels={[
-          { src: "/media/posters/beauty-1.jpg", type: "image" },
-          { src: "/media/reel-5.mp4", poster: "/media/posters/reel-5.jpg" },
-          { src: "/media/posters/beauty-2.jpg", type: "image" },
+          { src: "media/posters/beauty-1.jpg", type: "image" },
+          { src: "media/reel-5.mp4", poster: "media/posters/reel-5.jpg" },
+          { src: "media/posters/beauty-2.jpg", type: "image" },
         ]}
         eyebrow="Enquiries"
         caption="Let's make something worth stopping the scroll for."

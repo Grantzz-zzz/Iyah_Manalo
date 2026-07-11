@@ -7,9 +7,9 @@ export default function Home() {
     <div>
       <TripleReelHero
         reels={[
-          { src: "/media/reel-3.mp4", poster: "/media/posters/reel-3.jpg" },
-          { src: "/media/reel-1.mp4", poster: "/media/posters/reel-1.jpg" },
-          { src: "/media/beauty-1.mp4", poster: "/media/posters/beauty-1.jpg" },
+          { src: "media/reel-3.mp4", poster: "media/posters/reel-3.jpg" },
+          { src: "media/reel-1.mp4", poster: "media/posters/reel-1.jpg" },
+          { src: "media/beauty-1.mp4", poster: "media/posters/beauty-1.jpg" },
         ]}
         eyebrow="Model · Influencer · Manila"
         caption="Some faces are made for stillness. Mine moves."
@@ -55,7 +55,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              href="/portfolio"
+              href="#/portfolio"
               className="label mt-8 inline-block border-b border-espresso pb-1"
             >
               View the Portfolio

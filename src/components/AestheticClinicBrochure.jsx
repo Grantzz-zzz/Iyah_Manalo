@@ -32,8 +32,8 @@ export default function AestheticClinicBrochure() {
       className="relative mx-auto grid w-full max-w-[820px] grid-cols-2 gap-[3px] bg-espresso p-2 shadow-[0_30px_70px_-25px_rgba(28,24,21,0.5)] md:gap-1 md:p-3"
       style={{ perspective: "1200px" }}
     >
-      <BrochurePage src="/media/Aesthetic-1.mp4" page="01" side="left" />
-      <BrochurePage src="/media/Aesthetic-2.mp4" page="02" side="right" />
+      <BrochurePage src="media/Aesthetic-1.mp4" page="01" side="left" />
+      <BrochurePage src="media/Aesthetic-2.mp4" page="02" side="right" />
       <div className="pointer-events-none absolute bottom-2 left-1/2 top-2 z-10 w-3 -translate-x-1/2 bg-gradient-to-r from-black/25 via-bone/10 to-black/25 blur-[1px] md:bottom-3 md:top-3" />
     </motion.div>
   );
