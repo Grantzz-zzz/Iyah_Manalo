@@ -36,10 +36,10 @@ export default function Contact() {
               <dt className="label">Email</dt>
               <dd>
                 <a
-                  href="mailto:booking@iyahmanalo.com"
+                  href="mailto:workwithiahh@gmail.com"
                   className="border-b border-transparent text-lg transition-colors hover:border-espresso"
                 >
-                  booking@iyahmanalo.com
+                  workwithiahh@gmail.com
                 </a>
               </dd>
             </div>
@@ -92,7 +92,7 @@ export default function Contact() {
 
             <div className="mt-6 flex justify-center gap-4">
               <a
-                href="mailto:booking@iyahmanalo.com"
+                href="mailto:workwithiahh@gmail.com"
                 aria-label="Email Iyah Manalo"
                 className="group"
               >

@@ -11,7 +11,7 @@ export default function Footer() {
           <a href="https://www.facebook.com/iyah.manalo.10" className="label hover:text-espresso" target="_blank" rel="noreferrer">
             Facebook
           </a>
-          <a href="mailto:booking@iyahmanalo.com" className="label hover:text-espresso">
+          <a href="mailto:workwithiahh@gmail.com" className="label hover:text-espresso">
             Email
           </a>
         </div>
