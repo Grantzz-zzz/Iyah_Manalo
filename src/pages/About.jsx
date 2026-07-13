@@ -60,16 +60,18 @@ const brands = [
 function BrandTile({ name, file, mobile = false }) {
   return (
     <div
-      className={`flex aspect-[4/3] items-center justify-center bg-white/60 p-5 md:p-6 ${
-        mobile ? "w-[44vw] min-w-[160px] max-w-[210px] snap-start" : ""
+      className={`flex aspect-square items-center justify-center rounded-full border border-sand bg-bone p-1.5 shadow-[0_14px_35px_-28px_rgba(28,24,21,0.65)] ${
+        mobile ? "w-[38vw] min-w-[132px] max-w-[170px] snap-start" : "w-full"
       }`}
     >
-      <img
-        src={`media/brands/${file}`}
-        alt={`${name} logo`}
-        loading="lazy"
-        className="h-full w-full object-contain"
-      />
+      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white p-[18%]">
+        <img
+          src={`media/brands/${file}`}
+          alt={`${name} logo`}
+          loading="lazy"
+          className="h-full w-full object-contain"
+        />
+      </div>
     </div>
   );
 }
@@ -146,13 +148,13 @@ export default function About() {
             <p className="label text-[10px] md:hidden">Swipe</p>
           </div>
 
-          <div className="gallery-scroll -mx-6 flex snap-x snap-mandatory gap-2 overflow-x-auto px-6 pb-2 md:hidden">
+          <div className="gallery-scroll -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-3 md:hidden">
             {brands.map(([name, file]) => (
               <BrandTile key={name} name={name} file={file} mobile />
             ))}
           </div>
 
-          <div className="hidden gap-px overflow-hidden border border-sand bg-sand md:grid md:grid-cols-6 xl:grid-cols-8">
+          <div className="hidden gap-x-6 gap-y-8 md:grid md:grid-cols-6 xl:grid-cols-8">
             {brands.map(([name, file]) => (
               <BrandTile key={name} name={name} file={file} />
             ))}
