@@ -40,7 +40,7 @@ const brands = [
   ["Glad2Glow", "glad2glow.jpeg"],
   ["MAC Styler", "macstyler.png"],
   ["Fairy Skin", "fairyskin.jpg"],
-  ["SKINEVER", "skinever.jpeg"],
+  ["Skinavor", "skinavor.png"],
   ["BYFINA", "byfina.jpeg"],
   ["moody", "moody lenses.png"],
   ["OLENS", "olens.png"],
@@ -49,6 +49,7 @@ const brands = [
   ["JOOCYEE", "joocyee.jpeg"],
   ["MEDITHERAPY", "meditherapy.jpeg"],
   ["CoFANCY", "cofancy.jpeg"],
+  ["LOA", "loa.png"],
   ["Mislens", "mislens.png"],
   ["SEA Makeup", "sea makeup.jpeg"],
   ["O.TWO.O", "otwoo.jpeg"],
@@ -64,12 +65,12 @@ function BrandTile({ name, file, mobile = false }) {
         mobile ? "w-[38vw] min-w-[132px] max-w-[170px] snap-start" : "w-full"
       }`}
     >
-      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white p-[18%]">
+      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white">
         <img
           src={`media/brands/${file}`}
           alt={`${name} logo`}
           loading="lazy"
-          className="h-full w-full object-contain"
+          className="h-full w-full rounded-full object-cover"
         />
       </div>
     </div>
