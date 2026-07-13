@@ -31,6 +31,49 @@ const opportunities = [
   },
 ];
 
+const brands = [
+  ["Vice Cosmetics", "vice.jpeg"],
+  ["SKINTIFIC", "skintific.png"],
+  ["SACE LADY", "sacelady.jpeg"],
+  ["Cream Silk", "creamsilk.jpeg"],
+  ["Dove", "dove.png"],
+  ["Glad2Glow", "glad2glow.jpeg"],
+  ["MAC Styler", "macstyler.png"],
+  ["Fairy Skin", "fairyskin.jpg"],
+  ["Skinavor", "skinavor.png"],
+  ["BYFINA", "byfina.jpeg"],
+  ["moody", "moody lenses.png"],
+  ["OLENS", "olens.png"],
+  ["Anua", "anua.png"],
+  ["Vita Bears", "vita bear.png"],
+  ["JOOCYEE", "joocyee.jpeg"],
+  ["MEDITHERAPY", "meditherapy.jpeg"],
+  ["CoFANCY", "cofancy.jpeg"],
+  ["Mislens", "mislens.png"],
+  ["SEA Makeup", "sea makeup.jpeg"],
+  ["O.TWO.O", "otwoo.jpeg"],
+  ["TTDEYE", "ttdye.jpeg"],
+  ["Beauty Couture", "beauty couture.jpeg"],
+  ["Ghetto Dreams", "ghetto dreams.jpeg"],
+];
+
+function BrandTile({ name, file, mobile = false }) {
+  return (
+    <div
+      className={`flex aspect-[4/3] items-center justify-center bg-white/60 p-5 md:p-6 ${
+        mobile ? "w-[44vw] min-w-[160px] max-w-[210px] snap-start" : ""
+      }`}
+    >
+      <img
+        src={`media/brands/${file}`}
+        alt={`${name} logo`}
+        loading="lazy"
+        className="h-full w-full object-contain"
+      />
+    </div>
+  );
+}
+
 export default function About() {
   return (
     <div>
@@ -93,6 +136,27 @@ export default function About() {
           >
             Work With Iyah
           </motion.a>
+        </div>
+      </section>
+
+      <section className="border-t border-sand px-6 py-12 md:px-[8vw] md:py-20">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="mb-7 flex items-end justify-between gap-6 md:mb-10">
+            <p className="label text-[12px]">Selected Brand Collaborations</p>
+            <p className="label text-[10px] md:hidden">Swipe</p>
+          </div>
+
+          <div className="gallery-scroll -mx-6 flex snap-x snap-mandatory gap-2 overflow-x-auto px-6 pb-2 md:hidden">
+            {brands.map(([name, file]) => (
+              <BrandTile key={name} name={name} file={file} mobile />
+            ))}
+          </div>
+
+          <div className="hidden gap-px overflow-hidden border border-sand bg-sand md:grid md:grid-cols-6 xl:grid-cols-8">
+            {brands.map(([name, file]) => (
+              <BrandTile key={name} name={name} file={file} />
+            ))}
+          </div>
         </div>
       </section>
 
