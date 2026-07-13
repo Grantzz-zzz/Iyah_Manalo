@@ -12,7 +12,6 @@ export default function Home() {
           { src: "media/beauty-1.mp4", poster: "media/posters/beauty-1.jpg" },
         ]}
         eyebrow="Model · Influencer · Manila"
-        caption="Some faces are made for stillness. Mine moves."
       />
 
       <section className="mx-auto max-w-[1600px] px-6 py-14 md:px-[8vw] md:py-36">
