@@ -1,8 +1,33 @@
 import { motion } from "framer-motion";
+import { useInViewVideo } from "../lib/useInViewVideo";
 
 const instagramUrl =
   "https://www.instagram.com/iyahmnl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D";
 const facebookUrl = "https://www.facebook.com/iyah.manalo.10";
+
+const contactReels = [
+  { src: "media/reel-5.mp4", poster: "media/posters/reel-5.jpg" },
+  { src: "media/Fashion-1.mp4" },
+  { src: "media/Fashion-2.mp4" },
+];
+
+function ContactReel({ src, poster }) {
+  const videoRef = useInViewVideo({ threshold: 0.25 });
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      poster={poster}
+      className="aspect-[9/16] h-full w-full object-cover"
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      aria-hidden="true"
+    />
+  );
+}
 
 function SocialIcon({ children }) {
   return (
@@ -118,18 +143,10 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="mt-8 grid grid-cols-3 gap-2 overflow-hidden rounded-xl">
-              {["gallery-3.jpg", "gallery-5.jpg", "gallery-8.jpg"].map(
-                (image) => (
-                  <img
-                    key={image}
-                    src={`media/${image}`}
-                    alt=""
-                    className="aspect-[3/4] h-full w-full object-cover"
-                    aria-hidden="true"
-                  />
-                )
-              )}
+            <div className="mt-8 grid grid-cols-3 gap-2 overflow-hidden rounded-xl bg-espresso/10">
+              {contactReels.map((reel) => (
+                <ContactReel key={reel.src} {...reel} />
+              ))}
             </div>
           </div>
         </motion.div>
