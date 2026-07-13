@@ -40,7 +40,7 @@ export default function Nav() {
   return (
     <header
       className={`fixed left-0 top-0 z-50 w-full transition-colors duration-500 ${
-        scrolled ? "bg-bone/90 backdrop-blur-sm" : "bg-transparent"
+        scrolled || open ? "bg-bone" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-[8vw]">
@@ -90,6 +90,7 @@ export default function Nav() {
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="fixed bottom-0 right-0 top-0 z-50 flex w-[82vw] max-w-sm flex-col bg-bone px-7 py-6 shadow-2xl md:hidden"
+              style={{ backgroundColor: "#FAF7F2", opacity: 1 }}
             >
               <div className="flex items-center justify-between border-b border-sand pb-5">
                 <p className="font-display text-xl italic">Iyah Manalo</p>
