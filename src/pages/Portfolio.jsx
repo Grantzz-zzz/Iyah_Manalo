@@ -14,6 +14,7 @@ const featuredWorks = [
   { src: "media/Featured-Works-3.mp4", poster: "media/posters/Featured-Works-3.jpg", label: "Campaign 03" },
   { src: "media/Featured-Works-4.mp4", poster: "media/posters/Featured-Works-4.jpg", label: "Campaign 04" },
   { src: "media/Featured-Works-5.mp4", label: "Campaign 05" },
+  { src: "media/Featured-Works-6.mp4", label: "Campaign 06" },
 ];
 
 export default function Portfolio() {
@@ -34,10 +35,10 @@ export default function Portfolio() {
       <section className="mx-auto max-w-[1600px] px-6 py-14 md:px-[8vw] md:py-28">
         <div className="mb-8 flex items-end justify-between border-b border-sand pb-5 md:mb-12 md:pb-6">
           <p className="label">Featured Works</p>
-          <p className="label text-ink-70 hidden md:block">05 Campaigns</p>
+          <p className="label text-ink-70 hidden md:block">06 Campaigns</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-5">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 lg:grid-cols-6">
           {featuredWorks.map((w, i) => (
             <VideoTile key={w.src} src={w.src} poster={w.poster} label={w.label} index={i} />
           ))}
