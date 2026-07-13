@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import RevealText from "../components/RevealText";
 import VideoTile from "../components/VideoTile";
 import AestheticClinicBrochure from "../components/AestheticClinicBrochure";
 
@@ -13,12 +12,8 @@ const stats = [
 export default function About() {
   return (
     <div>
-      <section className="mx-auto max-w-[1600px] px-6 pb-5 pt-20 md:px-[8vw] md:pb-7 md:pt-28">
-        <p className="label mb-3 text-[13px]">The Face</p>
-        <RevealText
-          lines={["Not just in front", "of the camera —"]}
-          className="font-display text-4xl leading-[1.05] md:text-6xl"
-        />
+      <section className="mx-auto max-w-[1600px] px-6 pb-3 pt-20 md:px-[8vw] md:pb-4 md:pt-28">
+        <p className="label text-[13px]">The Face</p>
       </section>
 
       <section className="grid gap-0 md:grid-cols-2">

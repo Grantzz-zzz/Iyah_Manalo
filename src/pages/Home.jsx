@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import TripleReelHero from "../components/TripleReelHero";
-import RevealText from "../components/RevealText";
 
 export default function Home() {
   return (
@@ -23,10 +22,6 @@ export default function Home() {
             <p className="label mb-7 mt-4 max-w-sm leading-relaxed text-ink-70 md:mb-10">
               Soft Glam Beauty • Fashion &amp; Lifestyle Creator • Model
             </p>
-            <RevealText
-              lines={["A face for", "the front row,", "a voice for", "the feed."]}
-              className="font-display text-4xl leading-[1.05] md:text-6xl"
-            />
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <motion.div

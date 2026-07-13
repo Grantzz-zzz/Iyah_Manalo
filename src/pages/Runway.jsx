@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import TripleReelHero from "../components/TripleReelHero";
 import VideoTile from "../components/VideoTile";
-import RevealText from "../components/RevealText";
 
 const beautyReel = [
   { src: "media/beauty-1.mp4", poster: "media/posters/beauty-1.jpg", label: "Beauty 01" },
@@ -24,11 +23,7 @@ export default function Runway() {
       />
 
       <section className="mx-auto max-w-[1600px] px-6 py-10 md:px-[8vw] md:py-20">
-        <p className="label mb-3 text-[13px]">Beauty Editorial</p>
-        <RevealText
-          lines={["Close enough to see", "the details that don't", "make it to the runway."]}
-          className="font-display text-3xl leading-[1.1] md:text-5xl mb-10 md:mb-16 measure"
-        />
+        <p className="label mb-5 text-[13px] md:mb-7">Beauty Editorial</p>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-5">
           {beautyReel.map((b, i) => (

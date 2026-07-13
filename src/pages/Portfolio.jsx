@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import VideoTile from "../components/VideoTile";
-import RevealText from "../components/RevealText";
 
 const galleryImages = [
   { src: "media/gallery-9.jpg", alt: "Iyah Manalo editorial 09" },
@@ -22,15 +21,11 @@ const featuredWorks = [
 export default function Portfolio() {
   return (
     <div>
-      <section className="mx-auto max-w-[1600px] px-6 pb-2 pt-24 md:px-[8vw] md:pb-4 md:pt-36">
-        <p className="label mb-3 text-[13px]">Photo Gallery</p>
-        <RevealText
-          lines={["A moodboard,", "not a gallery."]}
-          className="font-display text-4xl leading-[1.05] md:text-6xl"
-        />
+      <section className="mx-auto max-w-[1600px] px-6 pb-0 pt-24 md:px-[8vw] md:pb-1 md:pt-32">
+        <p className="label text-[13px]">Photo Gallery</p>
       </section>
 
-      <section className="py-5 md:px-[8vw] md:py-14">
+      <section className="pb-5 pt-3 md:px-[8vw] md:pb-14 md:pt-4">
         <div className="gallery-scroll flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-3 md:grid md:grid-cols-5 md:gap-5 md:overflow-visible md:px-0 md:pb-0">
           {galleryImages.map((image, index) => (
             <motion.figure
