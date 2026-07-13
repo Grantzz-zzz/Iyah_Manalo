@@ -24,7 +24,7 @@ export default function About() {
         </div>
 
         <div className="order-1 flex flex-col justify-center px-6 py-10 md:order-2 md:px-[6vw] md:py-24">
-          <dl className="grid grid-cols-2 gap-x-6 gap-y-6 border-t border-sand pt-8">
+          <dl className="grid grid-cols-2 gap-x-6 gap-y-7 border-t border-sand pt-8 md:gap-y-9 md:pt-10">
             {stats.map(([label, value], i) => (
               <motion.div
                 key={label}
@@ -33,11 +33,22 @@ export default function About() {
                 viewport={{ once: true, amount: 0.6 }}
                 transition={{ duration: 0.5, delay: i * 0.06 }}
               >
-                <dt className="label mb-1">{label}</dt>
-                <dd className="text-sm">{value}</dd>
+                <dt className="label mb-1.5 text-[12px]">{label}</dt>
+                <dd className="text-base leading-snug md:text-lg">{value}</dd>
               </motion.div>
             ))}
           </dl>
+
+          <motion.a
+            href="#enquiries"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.28 }}
+            className="label mt-8 inline-flex w-fit border-b border-espresso pb-1.5 text-[12px] text-espresso transition-opacity hover:opacity-60 md:mt-12"
+          >
+            Work With Iyah
+          </motion.a>
         </div>
       </section>
 
