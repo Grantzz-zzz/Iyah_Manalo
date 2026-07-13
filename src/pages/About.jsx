@@ -9,6 +9,28 @@ const stats = [
   ["Represented by", "Available on enquiry"],
 ];
 
+const opportunities = [
+  {
+    title: "Content Creation",
+    description:
+      "Luxury beauty, fashion, wellness & lifestyle content for TikTok, Instagram, and digital campaigns.",
+  },
+  {
+    title: "Photography",
+    description: "Products only · Products applied on me / wearing products",
+  },
+  {
+    title: "Campaign Modeling",
+    description:
+      "Beauty campaigns · Makeup collections · Skincare launches · Commercial · Editorial · E-commerce",
+  },
+  {
+    title: "Brand Partnerships",
+    description:
+      "Sponsored campaigns · Brand ambassadorships · PR collaborations · Event appearances",
+  },
+];
+
 export default function About() {
   return (
     <div>
@@ -24,7 +46,29 @@ export default function About() {
         </div>
 
         <div className="order-1 flex flex-col justify-center px-6 py-10 md:order-2 md:px-[6vw] md:py-24">
-          <dl className="grid grid-cols-2 gap-x-6 gap-y-7 border-t border-sand pt-8 md:gap-y-9 md:pt-10">
+          <div>
+            <p className="label mb-6 text-[12px]">Partnership Opportunities</p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-7 md:gap-x-10 md:gap-y-9">
+              {opportunities.map(({ title, description }, index) => (
+                <motion.article
+                  key={title}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5, delay: index * 0.06 }}
+                >
+                  <h2 className="font-display text-xl leading-tight md:text-2xl">
+                    {title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-70 md:text-[15px]">
+                    {description}
+                  </p>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+
+          <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-7 border-t border-sand pt-8 md:mt-14 md:gap-y-9 md:pt-10">
             {stats.map(([label, value], i) => (
               <motion.div
                 key={label}
