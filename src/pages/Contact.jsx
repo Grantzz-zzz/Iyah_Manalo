@@ -14,8 +14,8 @@ function SocialIcon({ children }) {
 
 export default function Contact() {
   return (
-    <section className="min-h-screen bg-bone px-6 pb-24 pt-28 md:px-[8vw] md:pb-32 md:pt-40">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-16 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
+    <section className="min-h-screen bg-bone px-6 pb-16 pt-24 md:px-[8vw] md:pb-32 md:pt-40">
+      <div className="mx-auto grid max-w-[1400px] items-center gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
         <motion.div
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}

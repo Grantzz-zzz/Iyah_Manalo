@@ -24,11 +24,11 @@ export default function Runway() {
         caption="Fashion Week — Backstage to Front Row"
       />
 
-      <section className="mx-auto max-w-[1600px] px-6 py-24 md:px-[8vw] md:py-32">
+      <section className="mx-auto max-w-[1600px] px-6 py-14 md:px-[8vw] md:py-32">
         <p className="label mb-6">Beauty Editorial</p>
         <RevealText
           lines={["Close enough to see", "the details that don't", "make it to the runway."]}
-          className="font-display text-3xl leading-[1.1] md:text-5xl mb-16 measure"
+          className="font-display text-3xl leading-[1.1] md:text-5xl mb-10 md:mb-16 measure"
         />
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-5">
@@ -38,18 +38,8 @@ export default function Runway() {
         </div>
       </section>
 
-      <section className="border-t border-sand px-6 py-20 md:px-[8vw] md:py-28">
-        <div className="mx-auto max-w-[1600px] grid gap-10 md:grid-cols-2">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7 }}
-            className="font-display italic text-2xl md:text-3xl measure"
-          >
-            "Runway isn't performance — it's twelve seconds of complete
-            honesty."
-          </motion.p>
+      <section className="border-t border-sand px-6 py-14 md:px-[8vw] md:py-28">
+        <div className="mx-auto max-w-[1600px]">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}

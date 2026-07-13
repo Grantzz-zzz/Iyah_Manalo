@@ -19,7 +19,7 @@ const featuredWorks = [
 export default function Portfolio() {
   return (
     <div>
-      <section className="mx-auto max-w-[1600px] px-6 pt-32 pb-10 md:px-[8vw] md:pt-40">
+      <section className="mx-auto max-w-[1600px] px-6 pb-6 pt-24 md:px-[8vw] md:pb-10 md:pt-40">
         <p className="label mb-6">Selected Work</p>
         <RevealText
           lines={["A moodboard,", "not a gallery."]}
@@ -27,12 +27,12 @@ export default function Portfolio() {
         />
       </section>
 
-      <section className="px-6 py-16 md:px-[8vw] md:py-24">
+      <section className="px-6 py-8 md:px-[8vw] md:py-24">
         <ImageBouquet images={galleryImages} />
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 py-20 md:px-[8vw] md:py-28">
-        <div className="mb-12 flex items-end justify-between border-b border-sand pb-6">
+      <section className="mx-auto max-w-[1600px] px-6 py-14 md:px-[8vw] md:py-28">
+        <div className="mb-8 flex items-end justify-between border-b border-sand pb-5 md:mb-12 md:pb-6">
           <p className="label">Featured Works</p>
           <p className="label text-ink-70 hidden md:block">05 Campaigns</p>
         </div>

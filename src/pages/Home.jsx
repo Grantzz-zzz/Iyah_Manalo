@@ -15,13 +15,13 @@ export default function Home() {
         caption="Some faces are made for stillness. Mine moves."
       />
 
-      <section className="mx-auto max-w-[1600px] px-6 py-24 md:px-[8vw] md:py-36">
-        <div className="grid gap-12 md:grid-cols-12">
+      <section className="mx-auto max-w-[1600px] px-6 py-14 md:px-[8vw] md:py-36">
+        <div className="grid gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5">
             <h2 className="font-display text-4xl leading-none md:text-6xl">
               Iyah Manalo
             </h2>
-            <p className="label mb-10 mt-4 max-w-sm leading-relaxed text-ink-70">
+            <p className="label mb-7 mt-4 max-w-sm leading-relaxed text-ink-70 md:mb-10">
               Soft Glam Beauty • Fashion &amp; Lifestyle Creator • Model
             </p>
             <RevealText
