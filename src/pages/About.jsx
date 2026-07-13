@@ -24,19 +24,6 @@ export default function About() {
         </div>
 
         <div className="order-1 flex flex-col justify-center px-6 py-10 md:order-2 md:px-[6vw] md:py-24">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="measure text-ink-70 mb-10"
-          >
-            Iyah started in front of a phone camera and found her way to
-            fashion week backstage areas, beauty campaigns, and editorial
-            sets. What stayed constant is the same restraint she brings to
-            every frame — less performance, more presence.
-          </motion.p>
-
           <dl className="grid grid-cols-2 gap-x-6 gap-y-6 border-t border-sand pt-8">
             {stats.map(([label, value], i) => (
               <motion.div
