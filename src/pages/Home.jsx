@@ -18,7 +18,12 @@ export default function Home() {
       <section className="mx-auto max-w-[1600px] px-6 py-24 md:px-[8vw] md:py-36">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <p className="label mb-6">Iyah Manalo</p>
+            <h2 className="font-display text-4xl leading-none md:text-6xl">
+              Iyah Manalo
+            </h2>
+            <p className="label mb-10 mt-4 max-w-sm leading-relaxed text-ink-70">
+              Soft Glam Beauty • Fashion &amp; Lifestyle Creator • Model
+            </p>
             <RevealText
               lines={["A face for", "the front row,", "a voice for", "the feed."]}
               className="font-display text-4xl leading-[1.05] md:text-6xl"
