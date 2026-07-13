@@ -7,6 +7,16 @@ const galleryImages = [
   { src: "media/gallery-11.jpg", alt: "Iyah Manalo editorial 11" },
   { src: "media/gallery-12.JPG", alt: "Iyah Manalo editorial 12" },
   { src: "media/gallery-13.jpg", alt: "Iyah Manalo editorial 13" },
+  { src: "media/gallery-14.jpg", alt: "Iyah Manalo editorial 14" },
+  { src: "media/gallery-15.JPG", alt: "Iyah Manalo editorial 15" },
+  { src: "media/gallery-16.jpg", alt: "Iyah Manalo editorial 16" },
+  { src: "media/gallery-17.PNG", alt: "Iyah Manalo editorial 17" },
+  { src: "media/gallery-18.jpeg", alt: "Iyah Manalo editorial 18" },
+  { src: "media/gallery-19.PNG", alt: "Iyah Manalo editorial 19" },
+  { src: "media/gallery-20.JPG", alt: "Iyah Manalo editorial 20" },
+  { src: "media/gallery-21.jpeg", alt: "Iyah Manalo editorial 21" },
+  { src: "media/gallery-22.PNG", alt: "Iyah Manalo editorial 22" },
+  { src: "media/gallery-23.jpg", alt: "Iyah Manalo editorial 23" },
 ];
 
 const featuredWorks = [
