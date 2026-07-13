@@ -33,21 +33,21 @@ export default function Home() {
               className="measure space-y-5 text-lg text-ink-70"
             >
               <p>
-                Hi, I’m Iyah Manalo, a beauty, fashion, and lifestyle content
-                creator based in the Philippines.
+                I’m Iyah Manalo, a beauty, fashion, and lifestyle creator known
+                for my soft glam aesthetic and clean, elevated visual style.
               </p>
               <p>
-                I create clean, elevated content that blends luxury aesthetics
-                with authentic storytelling. My passion lies in beauty,
-                skincare, fashion, wellness, and lifestyle, where I showcase
-                products through engaging GRWMs, product features, event
-                coverage, and everyday experiences.
+                I create clean, polished visuals that showcase beauty, skincare,
+                fashion, and wellness through GRWMs, product features, event
+                coverage, and brand collaborations. My goal is to present every
+                brand with elegance, authenticity, and attention to detail while
+                staying true to my signature aesthetic.
               </p>
               <p>
-                I believe the most impactful content feels genuine while
-                remaining visually refined. My goal is to help brands connect
-                with their audience through high-quality, relatable content
-                that inspires trust and drives engagement.
+                In addition to content creation, I’m available for commercial
+                modeling, beauty campaigns, makeup collection launches,
+                editorial shoots, and long-term brand partnerships, creating
+                content that is both visually elevated and impactful.
               </p>
             </motion.div>
             <motion.a
