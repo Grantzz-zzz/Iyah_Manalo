@@ -40,7 +40,7 @@ const brands = [
   ["Glad2Glow", "glad2glow.jpeg"],
   ["MAC Styler", "macstyler.png"],
   ["Fairy Skin", "fairyskin.jpg"],
-  ["Skinavor", "skinavor.png"],
+  ["SKINEVER", "skinever.jpeg"],
   ["BYFINA", "byfina.jpeg"],
   ["moody", "moody lenses.png"],
   ["OLENS", "olens.png"],
@@ -52,7 +52,7 @@ const brands = [
   ["Mislens", "mislens.png"],
   ["SEA Makeup", "sea makeup.jpeg"],
   ["O.TWO.O", "otwoo.jpeg"],
-  ["TTDEYE", "ttdye.jpeg"],
+  ["TTDEYE", "ttdyee.jpeg"],
   ["Beauty Couture", "beauty couture.jpeg"],
   ["Ghetto Dreams", "ghetto dreams.jpeg"],
 ];
