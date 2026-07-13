@@ -54,7 +54,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              href="#/portfolio"
+              href="#portfolio"
               className="label mt-8 inline-block border-b border-espresso pb-1"
             >
               View the Portfolio

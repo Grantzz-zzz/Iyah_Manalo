@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -9,73 +6,25 @@ import Portfolio from "./pages/Portfolio";
 import Runway from "./pages/Runway";
 import Contact from "./pages/Contact";
 
-function PageWrapper({ children }) {
-  return (
-    <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {children}
-    </motion.main>
-  );
-}
+const sections = [
+  { id: "arrival", Component: Home },
+  { id: "face", Component: About },
+  { id: "portfolio", Component: Portfolio },
+  { id: "runway", Component: Runway },
+  { id: "enquiries", Component: Contact },
+];
 
 export default function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [location.pathname]);
-
   return (
     <>
       <Nav />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route
-            path="/"
-            element={
-              <PageWrapper>
-                <Home />
-              </PageWrapper>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <PageWrapper>
-                <About />
-              </PageWrapper>
-            }
-          />
-          <Route
-            path="/portfolio"
-            element={
-              <PageWrapper>
-                <Portfolio />
-              </PageWrapper>
-            }
-          />
-          <Route
-            path="/runway"
-            element={
-              <PageWrapper>
-                <Runway />
-              </PageWrapper>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <PageWrapper>
-                <Contact />
-              </PageWrapper>
-            }
-          />
-        </Routes>
-      </AnimatePresence>
+      <main>
+        {sections.map(({ id, Component }) => (
+          <section key={id} id={id} className="scroll-mt-16 md:scroll-mt-20">
+            <Component />
+          </section>
+        ))}
+      </main>
       <Footer />
     </>
   );

@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { to: "/", label: "Arrival" },
-  { to: "/about", label: "The Face" },
-  { to: "/portfolio", label: "Portfolio" },
-  { to: "/runway", label: "Runway" },
-  { to: "/contact", label: "Enquiries" },
+  { id: "arrival", label: "Arrival" },
+  { id: "face", label: "The Face" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "runway", label: "Runway" },
+  { id: "enquiries", label: "Enquiries" },
 ];
 
 export default function Nav() {
@@ -20,103 +19,109 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const openMenu = () => {
-    const root = document.documentElement;
-    const previousScrollBehavior = root.style.scrollBehavior;
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
-    root.style.scrollBehavior = "auto";
-    setOpen(true);
-
+  const navigateTo = (id) => {
+    setOpen(false);
+    window.history.replaceState(null, "", `#${id}`);
     requestAnimationFrame(() => {
-      root.scrollTop = 0;
-      document.body.scrollTop = 0;
-      window.scrollTo(0, 0);
-
-      requestAnimationFrame(() => {
-        root.style.scrollBehavior = previousScrollBehavior;
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     });
   };
 
   return (
     <header
-      className={
-        (open ? "relative " : "sticky top-0 ") +
-        "z-50 w-full transition-colors duration-500 md:fixed md:top-0 " +
-        (scrolled || open ? "bg-bone/95 backdrop-blur-sm" : "bg-transparent")
-      }
+      className={`fixed left-0 top-0 z-50 w-full transition-colors duration-500 ${
+        scrolled ? "bg-bone/90 backdrop-blur-sm" : "bg-transparent"
+      }`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-[8vw]">
-        <NavLink to="/" className="font-display italic text-lg md:text-xl">
+        <button
+          onClick={() => navigateTo("arrival")}
+          className="font-display text-lg italic md:text-xl"
+        >
           Iyah Manalo
-        </NavLink>
+        </button>
 
-        <nav className="hidden gap-8 md:flex">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              end={l.to === "/"}
-              className={({ isActive }) =>
-                "label relative pb-1 transition-colors " +
-                (isActive ? "text-espresso" : "hover:text-espresso")
-              }
+        <nav className="hidden gap-8 md:flex" aria-label="Main navigation">
+          {links.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => navigateTo(link.id)}
+              className="label border-b border-transparent pb-1 transition-colors hover:border-espresso hover:text-espresso"
             >
-              {({ isActive }) => (
-                <>
-                  {l.label}
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-underline"
-                      className="absolute -bottom-0.5 left-0 h-px w-full bg-espresso"
-                    />
-                  )}
-                </>
-              )}
-            </NavLink>
+              {link.label}
+            </button>
           ))}
         </nav>
 
         <button
-          onClick={open ? () => setOpen(false) : openMenu}
+          onClick={() => setOpen(true)}
           className="label md:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label="Open menu"
           aria-expanded={open}
         >
-          {open ? "Close" : "Menu"}
+          Menu
         </button>
       </div>
 
       <AnimatePresence>
         {open && (
-          <motion.nav
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-sand bg-bone md:hidden"
-          >
-            <div className="grid grid-cols-2 gap-x-6 px-6 py-8">
-            {links.map((l, i) => (
-              <motion.div
-                key={l.to}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.08 * i }}
-                className="border-b border-sand py-4"
-              >
-                <NavLink
-                  to={l.to}
-                  end={l.to === "/"}
+          <>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+              className="fixed inset-0 z-40 bg-espresso/35 md:hidden"
+              aria-label="Close menu"
+            />
+            <motion.aside
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed bottom-0 right-0 top-0 z-50 flex w-[82vw] max-w-sm flex-col bg-bone px-7 py-6 shadow-2xl md:hidden"
+            >
+              <div className="flex items-center justify-between border-b border-sand pb-5">
+                <p className="font-display text-xl italic">Iyah Manalo</p>
+                <button
                   onClick={() => setOpen(false)}
-                  className="font-display text-2xl italic"
+                  className="label"
+                  aria-label="Close menu"
                 >
-                  {l.label}
-                </NavLink>
-              </motion.div>
-            ))}
-            </div>
-          </motion.nav>
+                  Close
+                </button>
+              </div>
+
+              <nav className="mt-8 flex flex-col" aria-label="Mobile navigation">
+                {links.map((link, index) => (
+                  <motion.button
+                    key={link.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.08 + index * 0.05 }}
+                    onClick={() => navigateTo(link.id)}
+                    className="border-b border-sand py-5 text-left font-display text-3xl italic"
+                  >
+                    {link.label}
+                  </motion.button>
+                ))}
+              </nav>
+
+              <p className="label mt-auto text-ink-70">
+                Beauty • Fashion • Lifestyle
+              </p>
+            </motion.aside>
+          </>
         )}
       </AnimatePresence>
     </header>
