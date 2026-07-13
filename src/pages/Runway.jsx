@@ -38,17 +38,7 @@ export default function Runway() {
       </section>
 
       <section className="border-t border-sand px-6 py-14 md:px-[8vw] md:py-28">
-        <div className="mx-auto grid max-w-[1600px] gap-8 md:grid-cols-2 md:gap-10">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7 }}
-            className="font-display measure text-2xl italic md:text-3xl"
-          >
-            "Runway isn't performance — it's twelve seconds of complete
-            honesty."
-          </motion.p>
+        <div className="mx-auto max-w-[1600px]">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}

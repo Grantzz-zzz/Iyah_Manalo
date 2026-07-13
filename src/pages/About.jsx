@@ -33,17 +33,6 @@ export default function About() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7 }}
-            className="font-display mb-8 measure text-2xl italic md:text-3xl"
-          >
-            "I've always thought a good photo should feel like a sentence you
-            can't quite finish."
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="measure text-ink-70 mb-10"
           >
