@@ -60,19 +60,22 @@ const brands = [
 
 function BrandTile({ name, file }) {
   return (
-    <div
-      className="flex aspect-square w-[38vw] min-w-[132px] max-w-[170px] shrink-0 snap-start items-center justify-center rounded-full border border-sand bg-bone p-1.5 shadow-[0_14px_35px_-28px_rgba(28,24,21,0.65)] md:w-full md:min-w-0 md:max-w-none"
-    >
-      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white">
-        <img
-          src={`media/brands/${file}`}
-          alt={`${name} logo`}
-          loading="eager"
-          decoding="async"
-          className="h-full w-full rounded-full object-cover"
-        />
+    <figure className="w-[38vw] min-w-[132px] max-w-[170px] shrink-0 snap-start md:w-full md:min-w-0 md:max-w-none">
+      <div className="flex aspect-square w-full items-center justify-center rounded-full border border-sand bg-bone p-1.5 shadow-[0_14px_35px_-28px_rgba(28,24,21,0.65)]">
+        <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white">
+          <img
+            src={`media/brands/${file}`}
+            alt={`${name} logo`}
+            loading="eager"
+            decoding="async"
+            className="h-full w-full rounded-full object-cover"
+          />
+        </div>
       </div>
-    </div>
+      <figcaption className="label mt-3 min-h-7 text-center text-[9px] leading-relaxed text-ink-70 md:text-[10px]">
+        {name}
+      </figcaption>
+    </figure>
   );
 }
 
