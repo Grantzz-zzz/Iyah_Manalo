@@ -43,3 +43,11 @@ textarea:focus-visible {
 .measure {
   max-width: 60ch;
 }
+
+.gallery-scroll {
+  scrollbar-width: none;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}

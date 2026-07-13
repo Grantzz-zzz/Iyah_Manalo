@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
-import ImageBouquet from "../components/ImageBouquet";
 import VideoTile from "../components/VideoTile";
 import RevealText from "../components/RevealText";
 
-const galleryImages = Array.from({ length: 8 }, (_, i) => ({
-  src: `media/gallery-${i + 1}.jpg`,
-  alt: `Iyah Manalo — editorial image ${i + 1}`,
-}));
+const galleryImages = [
+  { src: "media/gallery-9.jpg", alt: "Iyah Manalo editorial 09" },
+  { src: "media/gallery-10.jpg", alt: "Iyah Manalo editorial 10" },
+  { src: "media/gallery-11.jpg", alt: "Iyah Manalo editorial 11" },
+  { src: "media/gallery-12.JPG", alt: "Iyah Manalo editorial 12" },
+  { src: "media/gallery-13.jpg", alt: "Iyah Manalo editorial 13" },
+];
 
 const featuredWorks = [
   { src: "media/Featured-Works-1.mp4", poster: "media/posters/Featured-Works-1.jpg", label: "Campaign 01" },
@@ -28,8 +30,29 @@ export default function Portfolio() {
         />
       </section>
 
-      <section className="px-6 py-8 md:px-[8vw] md:py-24">
-        <ImageBouquet images={galleryImages} />
+      <section className="py-8 md:px-[8vw] md:py-24">
+        <div className="gallery-scroll flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-3 md:grid md:grid-cols-5 md:gap-5 md:overflow-visible md:px-0 md:pb-0">
+          {galleryImages.map((image, index) => (
+            <motion.figure
+              key={image.src}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6, delay: index * 0.06 }}
+              className="w-[78vw] shrink-0 snap-center md:w-auto"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="aspect-[3/4] h-full w-full bg-linen object-cover"
+                loading={index < 2 ? "eager" : "lazy"}
+              />
+            </motion.figure>
+          ))}
+        </div>
+        <p className="label mt-4 px-6 text-ink-70 md:hidden">
+          Swipe to explore
+        </p>
       </section>
 
       <section className="mx-auto max-w-[1600px] px-6 py-14 md:px-[8vw] md:py-28">
