@@ -13,8 +13,8 @@ const stats = [
 export default function About() {
   return (
     <div>
-      <section className="mx-auto max-w-[1600px] px-6 pb-10 pt-24 md:px-[8vw] md:pb-16 md:pt-40">
-        <p className="label mb-6">The Face</p>
+      <section className="mx-auto max-w-[1600px] px-6 pb-7 pt-24 md:px-[8vw] md:pb-10 md:pt-36">
+        <p className="label mb-3 text-[13px]">The Face</p>
         <RevealText
           lines={["Not just in front", "of the camera —"]}
           className="font-display text-4xl leading-[1.05] md:text-6xl"

@@ -12,7 +12,7 @@ function PortraitReel({ src, poster, position = "center", type = "video", featur
     >
       {type === "image" ? (
         <img
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute -left-px top-0 h-full w-[calc(100%+2px)] object-cover md:left-0 md:w-full"
           style={{ objectPosition: position }}
           src={src}
           alt=""
@@ -21,7 +21,7 @@ function PortraitReel({ src, poster, position = "center", type = "video", featur
       ) : (
         <video
           ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute -left-px top-0 h-full w-[calc(100%+2px)] object-cover md:left-0 md:w-full"
           style={{ objectPosition: position }}
           src={src}
           poster={poster}

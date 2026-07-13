@@ -23,8 +23,8 @@ export default function Runway() {
         eyebrow="On the Runway"
       />
 
-      <section className="mx-auto max-w-[1600px] px-6 py-14 md:px-[8vw] md:py-32">
-        <p className="label mb-6">Beauty Editorial</p>
+      <section className="mx-auto max-w-[1600px] px-6 py-10 md:px-[8vw] md:py-20">
+        <p className="label mb-3 text-[13px]">Beauty Editorial</p>
         <RevealText
           lines={["Close enough to see", "the details that don't", "make it to the runway."]}
           className="font-display text-3xl leading-[1.1] md:text-5xl mb-10 md:mb-16 measure"
