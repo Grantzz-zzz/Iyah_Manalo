@@ -8,8 +8,8 @@ export default function Footer() {
           <a href="https://www.instagram.com/iyahmnl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" className="label hover:text-espresso" target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href="https://www.facebook.com/iyah.manalo.10" className="label hover:text-espresso" target="_blank" rel="noreferrer">
-            Facebook
+          <a href="https://www.tiktok.com/@iyahhhmanalo?is_from_webapp=1&sender_device=pc" className="label hover:text-espresso" target="_blank" rel="noreferrer">
+            TikTok
           </a>
           <a href="mailto:workwithiahh@gmail.com" className="label hover:text-espresso">
             Email

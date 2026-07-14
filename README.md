@@ -54,7 +54,7 @@ retheme.
 
 ## Content to personalize before launch
 
-- Swap the Instagram/Facebook URLs and booking email in
+- Swap the Instagram/TikTok URLs and booking email in
   `src/components/Footer.jsx` and `src/pages/Contact.jsx`
 - Wire the contact form in `src/pages/Contact.jsx` to a real backend or
   form service (Formspree, Resend, etc.) — it currently only shows a

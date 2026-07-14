@@ -3,7 +3,8 @@ import { useInViewVideo } from "../lib/useInViewVideo";
 
 const instagramUrl =
   "https://www.instagram.com/iyahmnl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D";
-const facebookUrl = "https://www.facebook.com/iyah.manalo.10";
+const tiktokUrl =
+  "https://www.tiktok.com/@iyahhhmanalo?is_from_webapp=1&sender_device=pc";
 
 const contactReels = [
   { src: "media/reel-5.mp4", poster: "media/posters/reel-5.jpg" },
@@ -82,15 +83,15 @@ export default function Contact() {
               </dd>
             </div>
             <div className="grid gap-1 sm:grid-cols-[110px_1fr] sm:items-baseline">
-              <dt className="label">Facebook</dt>
+              <dt className="label">TikTok</dt>
               <dd>
                 <a
-                  href={facebookUrl}
+                  href={tiktokUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="border-b border-transparent text-lg transition-colors hover:border-espresso"
                 >
-                  Iyah Manalo
+                  @iyahhhmanalo
                 </a>
               </dd>
             </div>
@@ -133,13 +134,13 @@ export default function Contact() {
                 <SocialIcon>IG</SocialIcon>
               </a>
               <a
-                href={facebookUrl}
+                href={tiktokUrl}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Iyah Manalo on Facebook"
+                aria-label="Iyah Manalo on TikTok"
                 className="group"
               >
-                <SocialIcon>FB</SocialIcon>
+                <SocialIcon>TT</SocialIcon>
               </a>
             </div>
 

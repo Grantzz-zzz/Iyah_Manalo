@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import TripleReelHero from "../components/TripleReelHero";
 import VideoTile from "../components/VideoTile";
 
@@ -29,22 +28,6 @@ export default function Runway() {
           {beautyReel.map((b, i) => (
             <VideoTile key={b.src} src={b.src} poster={b.poster} label={b.label} index={i} />
           ))}
-        </div>
-      </section>
-
-      <section className="border-t border-sand px-6 py-14 md:px-[8vw] md:py-28">
-        <div className="mx-auto max-w-[1600px]">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="measure text-ink-70"
-          >
-            From backstage prep to the final walk, Iyah's runway work spans
-            local and international shows. Press kits and full show reels
-            available on request for casting and booking teams.
-          </motion.p>
         </div>
       </section>
     </div>
