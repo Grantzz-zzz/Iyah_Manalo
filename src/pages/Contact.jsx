@@ -7,9 +7,12 @@ const tiktokUrl =
   "https://www.tiktok.com/@iyahhhmanalo?is_from_webapp=1&sender_device=pc";
 
 const contactReels = [
-  { src: "media/reel-5.mp4", poster: "media/posters/reel-5.jpg" },
-  { src: "media/Fashion-1.mp4" },
-  { src: "media/Fashion-2.mp4" },
+  { src: "media/reel-2.mp4", poster: "media/posters/reel-2.jpg" },
+  { src: "media/beauty-2.mp4", poster: "media/posters/beauty-2.jpg" },
+  {
+    src: "media/Featured-Works-1.mp4",
+    poster: "media/posters/Featured-Works-1.jpg",
+  },
 ];
 
 function ContactReel({ src, poster }) {
